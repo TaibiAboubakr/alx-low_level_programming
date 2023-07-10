@@ -18,7 +18,7 @@ return (NULL);
 while (str[i])
 i++;
 
-pdupstr = (char *)malloc(i *sizeof(char));
+pdupstr = (char *)malloc((i + 1) *sizeof(char));
 if (pdupstr == NULL)
 return (NULL);
 
