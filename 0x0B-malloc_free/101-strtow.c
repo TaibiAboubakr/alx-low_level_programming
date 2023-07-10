@@ -44,6 +44,8 @@ pw[i][l + 1] = '\0';
 break;
 }
 }
+if (wc == 0)
+return (NULL);
 pw[wc] = NULL;
 return (pw);
 }
