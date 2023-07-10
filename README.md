@@ -7,7 +7,10 @@ To run the code in this repository, you need a C compiler installed on your mach
 
 git clone https://github.com/TaibiAboubakr/alx-low_level_programming.git
 
-## <span style="color: green;">Directory: 0x00-hello_world</span> 
+
+## Directory: 0x00-hello_world
+
+
 ### C Compilation Steps
 
 This directory contains multiple scripts related to the different steps involved in compiling C programs: preprocessing, compiling, assembling, and linking. Here is a brief description of each step:
@@ -47,3 +50,43 @@ This directory contains programs written in the C programming language that delv
 ## Directory: 0x07-pointers_arrays_strings
 
 This directory builds upon the concepts covered in the previous directories, 0x05 and 0x06, by delving even deeper into pointers, arrays, and strings in the C programming language. It introduces additional techniques and functions for manipulating these data types effectively.
+
+## 0x08-recursion
+
+This directory contains C programs that demonstrate the concept of recursion. 
+Recursion is a programming technique where a function calls itself to solve a problem. 
+The programs in this directory showcase various examples of recursive functions.
+
+
+## 0x09-static_libraries
+
+This directory contains the source code and a static library for a collection of utility functions.
+
+### Contents
+1. main.h : file contains declaration of prototypes
+2. libmy.a : static library libmy.a containing many functions
+3. create_static_lib.sh : script called create_static_lib.sh that creates a static library called liball.a from all the .c files that are in the current directory.
+
+
+## 0x0A-argc_argv
+This directory contains C programs that demonstrate the usage of argc and argv in the main function.
+
++ Files :
+0-whatsmyname.c: a program that prints its name
+1-args.c : a program that prints the number of arguments passed into it.
+and others :2-args.c,3-mul.c,4-add.c, 100-change.c
+
+### Description
+The purpose of this directory is to provide examples and explanations on how to work with command-line arguments in C programs using argc and argv.
+
+
+## 0x0B-malloc_free
+
+This directory contains solutions for the tasks related to dynamic memory allocation and memory management in the C programming language.
+
++ Learning Objectives
+By completing the tasks in this directory, you should have a good understanding of the following concepts:
+
+1. Dynamic memory allocation using malloc, calloc, and realloc.
+2. Memory deallocation using free.
+3. Common memory-related issues such as memory leaks and buffer overflows.
