@@ -21,7 +21,10 @@ void *rea;
 /* then the call is equivalent to free(ptr). Return NULL*/
 
 if (new_size == 0 && ptr != NULL)
+{
+free(ptr);
 return (NULL);
+}
 /* //do not do anything and return ptr */
 if (new_size == old_size && ptr != NULL)
 return (ptr);
