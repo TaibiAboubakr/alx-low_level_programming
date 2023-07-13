@@ -23,7 +23,7 @@ void *rea;
 if (new_size == 0 && ptr != NULL)
 return (NULL);
 /* //do not do anything and return ptr */
-if (new_size == old_size)
+if (new_size == old_size && ptr != NULL)
 return (ptr);
 
 /* If ptr is NULL, then the call is equivalent to malloc(new_size),*/
