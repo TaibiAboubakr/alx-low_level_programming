@@ -7,6 +7,19 @@
 void check(int len_arg1, int len_arg2, char *av[]);
 int checkiszero(int l1, int l2, int *p1, int *p2);
 void forfree(int **pp, int *pn1, int *pn2, int *pt, int len_arg1);
+void puterror(void);
+/**
+ * putError - print Error followed by newline.
+ */
+void putError(void)
+{
+_putchar('E');
+_putchar('r');
+_putchar('r');
+_putchar('o');
+_putchar('r');
+_putchar('\n');
+}
 /**
  * check - check if the passed arguments are correct.
  * @len_arg1:len of number 1
@@ -20,13 +33,13 @@ int i = 0;
 for (i = 0; i < len_arg1; i++)
 if (av[1][i] < 48 || av[1][i] > 57)
 {
-printf("Error\n");
+putError();
 exit(98);
 }
 for (i = 0; i < len_arg2; i++)
 if (av[2][i] < 48 || av[2][i] > 57)
 {
-printf("Error\n");
+putError();
 exit(98);
 }
 }
@@ -86,7 +99,7 @@ char *arg1 = argv[1], *arg2 = argv[2];
 int len_arg1, len_arg2, i, j = 0, m, l = 0, r = 0, idxn1 = 0, k, tsum = 0;
 if (argc != 3)
 {
-printf("Error\n");
+putError();
 exit(98);
 }
 len_arg1 = strlen(argv[1]);
@@ -95,13 +108,13 @@ check(len_arg1, len_arg2, argv);
 pn1 = (int *)malloc(len_arg1 *sizeof(int));
 if (pn1 == NULL)
 {
-printf("Error\n");
+putError();
 exit(98);
 }
 pn2 = (int *)malloc(len_arg2 *sizeof(int));
 if (pn2 == NULL)
 {
-printf("Error\n");
+putError();
 free(pn1);
 exit(98);
 }
@@ -113,13 +126,14 @@ pn2[i] = arg2[i] - 48;
 
 if (checkiszero(len_arg1, len_arg2, pn1, pn2) == 0)
 {
-printf("0\n");
+_putchar(48);
+_putchar('\n');
 return (0);
 }
 pp = (int **)malloc(len_arg1 *sizeof(int *));
 if (pp == NULL)
 {
-printf("Error\n");
+putError();
 free(pn1);
 free(pn2);
 exit(98);
@@ -134,7 +148,7 @@ free(pp[j]);
 free(pn1);
 free(pn2);
 free(pp);
-printf("Error\n");
+putError();
 exit(91);
 }
 for (j = 0; j < len_arg1 + len_arg2 + i; j++)
@@ -187,8 +201,8 @@ i = 0;
 while (pt[i] == 0)
 i++;
 for (; i <= len_arg1 + len_arg2; i++)
-printf("%d", pt[i]);
-printf("\n");
+_putchar (pt[i] + 48);
+_putchar('\n');
 forfree(pp, pn1, pn2, pt, len_arg1);
 return (0);
 }
