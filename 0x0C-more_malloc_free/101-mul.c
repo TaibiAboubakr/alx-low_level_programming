@@ -196,7 +196,6 @@ r = tsum / 10;
 pt[k] = tsum % 10;
 k--;
 }
-
 i = 0;
 while (pt[i] == 0)
 i++;
