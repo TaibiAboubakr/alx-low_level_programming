@@ -31,7 +31,7 @@ if (ptr == NULL)
 {
 rea = malloc(new_size);
 if (rea == NULL)
-return (NULL);
+return (ptr);
 return (rea);
 }
 /* If new_size > old_size, the “added” memory should not be initialized */
