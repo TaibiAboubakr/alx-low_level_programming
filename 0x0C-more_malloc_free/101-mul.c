@@ -137,6 +137,8 @@ free(pp);
 printf("Error\n");
 exit(91);
 }
+for (j = 0; j < len_arg1 + len_arg2 + i; j++)
+pp[i][j] = 0;
 }
 idxn1 = (len_arg1 - 1);
 for (k = len_arg1 - 1, i =  0; i < len_arg1; i++, idxn1++, k--)
@@ -166,6 +168,8 @@ free(pn2);
 free(pp);
 exit(98);
 }
+for (j = 0; j < k; j++)
+pt[j] = 0;
 for (i = len_arg1 + len_arg2; i >= 0; i--)
 {
 tsum = 0;
