@@ -40,5 +40,5 @@ if (rea == NULL)
 return (ptr);
 memcpy(rea, ptr, old_size);
 free(ptr);
-return (ptr);
+return (rea);
 }
