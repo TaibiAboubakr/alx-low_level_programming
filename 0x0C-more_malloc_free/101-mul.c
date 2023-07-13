@@ -84,7 +84,7 @@ int main(int argc, char *argv[])
 int *pn1, *pn2, **pp, *pt;
 char *arg1 = argv[1], *arg2 = argv[2];
 int len_arg1, len_arg2, i, j = 0, m, l = 0, r = 0, idxn1 = 0, k, tsum = 0;
-if (argc < 3)
+if (argc != 3)
 {
 printf("Error\n");
 exit(98);
