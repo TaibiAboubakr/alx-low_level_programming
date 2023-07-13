@@ -18,6 +18,6 @@ if (p == NULL)
 return (NULL);
 
 for (i = 0; i < b; i++)
-p[i] = '0';
+p[i] = 0;
 return (p);
 }
