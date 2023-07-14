@@ -104,6 +104,8 @@ exit(98);
 }
 len_arg1 = strlen(argv[1]);
 len_arg2 = strlen(argv[2]);
+len_arg1++;
+len_arg2++;
 check(len_arg1, len_arg2, argv);
 pn1 = (int *)malloc(len_arg1 *sizeof(int));
 if (pn1 == NULL)
