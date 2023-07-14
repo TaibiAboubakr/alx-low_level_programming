@@ -128,6 +128,8 @@ if (checkiszero(len_arg1, len_arg2, pn1, pn2) == 0)
 {
 _putchar(48);
 _putchar('\n');
+free(pn1);
+free(pn2);
 return (0);
 }
 pp = (int **)malloc(len_arg1 *sizeof(int *));
