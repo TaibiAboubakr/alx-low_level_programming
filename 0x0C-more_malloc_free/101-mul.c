@@ -104,8 +104,7 @@ exit(98);
 }
 len_arg1 = strlen(argv[1]);
 len_arg2 = strlen(argv[2]);
-len_arg1++;
-len_arg2++;
+
 check(len_arg1, len_arg2, argv);
 pn1 = (int *)malloc(len_arg1 *sizeof(int));
 if (pn1 == NULL)
@@ -142,6 +141,7 @@ free(pn1);
 free(pn2);
 exit(98);
 }
+
 for (i = 0; i < len_arg1; i++)
 {
 pp[i] = (int *)malloc((len_arg1 + len_arg2 + i) * sizeof(int));
