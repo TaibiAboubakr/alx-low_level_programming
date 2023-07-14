@@ -96,7 +96,7 @@ int main(int argc, char *argv[])
 {
 int *pn1, *pn2, **pp, *pt;
 char *arg1 = argv[1], *arg2 = argv[2];
-int len_arg1, len_arg2, i, j = 0, m, l = 0, r = 0, idxn1 = 0, k, tsum = 0;
+int len_arg1, len_arg2, i, j = 0, m, l = 0, r = 0, idxn1 = 0, k, tsum = 0, s;
 if (argc != 3)
 {
 putError();
@@ -104,7 +104,8 @@ exit(98);
 }
 len_arg1 = strlen(argv[1]);
 len_arg2 = strlen(argv[2]);
-
+printf("len1 = %d\n",len_arg1);
+printf("len2 = %d\n",len_arg2);
 check(len_arg1, len_arg2, argv);
 pn1 = (int *)malloc(len_arg1 *sizeof(int));
 if (pn1 == NULL)
@@ -144,7 +145,9 @@ exit(98);
 
 for (i = 0; i < len_arg1; i++)
 {
-pp[i] = (int *)malloc((len_arg1 + len_arg2 + i) * sizeof(int));
+printf("len = %d\n",1 + len_arg2 + i);
+s = len_arg1 + len_arg2;
+pp[i] = (int *)malloc(s * sizeof(int));
 if (pp[i] == NULL)
 {
 while (j < i)
@@ -155,13 +158,13 @@ free(pp);
 putError();
 exit(91);
 }
-for (j = 0; j < len_arg1 + len_arg2 + i; j++)
+for (j = 0; j < s - 1; j++)
 pp[i][j] = 0;
 }
 idxn1 = (len_arg1 - 1);
 for (k = len_arg1 - 1, i =  0; i < len_arg1; i++, idxn1++, k--)
 {
-for (j = len_arg2 - 1, l = (len_arg1 + len_arg2 - 1); j >= 0 ; j--, l--)
+for (j = len_arg2 - 1, l = s - 1; j >= 0 ; j--, l--)
 {
 m = pn1[k] * pn2[j] + r;
 r = m / 10;
@@ -175,7 +178,7 @@ r = 0;
 }
 }
 
-k = len_arg1 + len_arg2 + 1;
+k = s + 1;
 pt = (int *)malloc(k *sizeof(int));
 if (pt == NULL)
 {
@@ -188,7 +191,7 @@ exit(98);
 }
 for (j = 0; j < k; j++)
 pt[j] = 0;
-for (i = len_arg1 + len_arg2; i >= 0; i--)
+for (i = s - 1 ; i >= 0; i--)
 {
 tsum = 0;
 for (j = 0; j < len_arg1; j++)
@@ -197,8 +200,8 @@ tsum += pp[j][i];
 }
 tsum = tsum + r;
 r = tsum / 10;
-pt[k] = tsum % 10;
-k--;
+pt[s] = tsum % 10;
+s--;
 }
 i = 0;
 while (pt[i] == 0)
