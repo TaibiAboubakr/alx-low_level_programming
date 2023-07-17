@@ -23,8 +23,8 @@ return (NULL);
 p->name = malloc((j + 1) * sizeof(char));
 if (p->name == NULL)
 {
-return (NULL);
 free(p);
+return (NULL);
 }
 for (i = 0; i < j; i++)
 p->name[i] = name[i];
@@ -33,9 +33,9 @@ p->name[i] = '\0';
 p->owner = malloc((k + 1) * sizeof(char));
 if (p->owner == NULL)
 {
-return (NULL);
 free(p->name);
 free(p);
+return (NULL);
 }
 for (i = 0; owner[i]; i++)
 p->owner[i] = owner[i];
