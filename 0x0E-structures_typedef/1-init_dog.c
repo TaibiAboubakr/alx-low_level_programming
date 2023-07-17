@@ -12,13 +12,9 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-if (name == NULL)
-d->name = "0";
-else
+if (name != NULL)
 d->name = strdup(name);
-if (owner == NULL)
-d->owner = "0";
-else
+if (owner != NULL)
 d->owner = strdup(owner);
 d->age = age;
 
