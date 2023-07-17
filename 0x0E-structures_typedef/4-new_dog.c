@@ -35,7 +35,7 @@ if (p->owner == NULL)
 {
 return (NULL);
 free(p->name);
-free(d);
+free(p);
 }
 for (i = 0; owner[i]; i++)
 p->owner[i] = owner[i];
