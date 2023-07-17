@@ -1,3 +1,3 @@
 #ifndef SIZE
-#define SIZE 10
+#define SIZE (10)
 #endif /* SIZE */
