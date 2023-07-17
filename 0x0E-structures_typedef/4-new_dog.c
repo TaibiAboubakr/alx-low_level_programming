@@ -24,7 +24,7 @@ p->name = malloc((j + 1) * sizeof(char));
 if (p->name == NULL)
 {
 return (NULL);
-free(d);
+free(p);
 }
 for (i = 0; i < j; i++)
 p->name[i] = name[i];
