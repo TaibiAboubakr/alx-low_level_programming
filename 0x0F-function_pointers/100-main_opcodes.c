@@ -4,19 +4,7 @@
 
 void print_opcodes(int num_bytes);
 
-/**
- * print_opcodes - function that print opcodes for main function
- * @num_bytes : number of bytes to be printed.
- */
-void print_opcodes(int num_bytes)
-{
-int i;
-unsigned char *opcode = (unsigned char *)print_opcodes;
-/* printf("The opcodes of the main function:\n"); */
-for (i = 0; i < num_bytes; i++)
-printf("%02x ", opcode[i]);
-printf("\n");
-}
+
 
 /**
  * main - check the code
@@ -51,4 +39,18 @@ exit(2);
 x = atoi(argv[1]);
 print_opcodes(x);
 return (0);
+}
+/**
+ * print_opcodes - function that print opcodes for main function
+ * @num_bytes : number of bytes to be printed.
+ */
+void print_opcodes(int num_bytes)
+{
+int i;
+void *print_opcodes = (void *)main;
+unsigned char *opcode = (unsigned char *)print_opcodes;
+/* printf("The opcodes of the main function:\n"); */
+for (i = 0; i < num_bytes; i++)
+printf("%02x ", opcode[i]);
+printf("\n");
 }
