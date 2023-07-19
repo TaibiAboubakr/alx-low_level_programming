@@ -25,6 +25,6 @@ if (strcmp(ops[i].op, s) == 0)
 return (ops[i].f);
 i++;
 }
-printf("Error\n");
+printf("Error : No Operator Matched\n");
 return (NULL);
 }
