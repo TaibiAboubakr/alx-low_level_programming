@@ -31,18 +31,7 @@ strcmp(argv[3], "0") == 0)
 printf("Error\n");
 exit(100);
 }
-/* for (j = 1; j < 4;)
-{
-for (i = 0; argv[j][i]; i++)
-{
-if (argv[j][i] < 48 || argv[j][i] > 57)
-{
-printf("Not digits\n");
-exit(101);
-}
-}
-j += 2;
-} */
+
 
 if ((*get_op_func(argv[2])) != NULL)
 {
