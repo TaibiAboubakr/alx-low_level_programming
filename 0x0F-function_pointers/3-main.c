@@ -16,25 +16,23 @@ int main(int argc, char *argv[])
 int res, i, j;
 if (argc != 4)
 {
-printf("Error : nbr arg not valid\n");
+printf("Error\n");
 exit(98);
 }
 if (strcmp(argv[2], "+") != 0 && strcmp(argv[2], "-") != 0 &&
 strcmp(argv[2], "*") != 0 && strcmp(argv[2], "/") &&
 strcmp(argv[2], "%"))
 {
-printf("Error oprts\n");
+printf("Error\n");
 exit(99);
 }
-printf("oprator ok \n");
 if ((strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0) &&
 strcmp(argv[3], "0") == 0)
 {
-printf("Error div or mod by 0\n");
+printf("Error\n");
 exit(100);
 }
-printf("after check div and mod by 0 ok \n");
-for (j = 1; j < 4;)
+/* for (j = 1; j < 4;)
 {
 for (i = 0; argv[j][i]; i++)
 {
@@ -45,7 +43,7 @@ exit(101);
 }
 }
 j += 2;
-}
+} */
 
 if ((*get_op_func(argv[2])) != NULL)
 {
