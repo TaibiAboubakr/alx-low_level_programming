@@ -34,10 +34,9 @@ exit(100);
 }
 
 
-if ((*get_op_func(argv[2])) != NULL)
-{
+
 res = (*get_op_func(argv[2]))(atoi(argv[1]), atoi(argv[3]));
 printf("Result is %d\n", res);
-}
+
 return (0);
 }
