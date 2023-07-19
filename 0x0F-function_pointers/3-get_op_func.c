@@ -25,6 +25,6 @@ if (strcmp(ops[i].op, s) == 0)
 return (ops[i].f);
 i++;
 }
-printf("from get op , op not mathched\n");
+printf("Error\n");
 return (NULL);
 }
