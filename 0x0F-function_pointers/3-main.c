@@ -36,7 +36,7 @@ n1 = atoi(argv[1]);
 n2 = atoi(argv[3]);
 
 res = (*get_op_func(argv[2]))(n1, n2);
-printf("Result is %d\n", res);
+printf("%d\n", res);
 
 return (0);
 }
