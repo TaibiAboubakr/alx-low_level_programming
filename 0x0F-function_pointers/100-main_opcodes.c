@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 int res, i, j, x, neg = 0;
 if (argc != 2)
 {
-printf("Error : nbr arg not valid\n");
+printf("Error\n");
 exit(1);
 }
 
@@ -27,15 +27,12 @@ neg = 1;
 continue;
 }
 if (argv[1][i] < 48 || argv[1][i] > 57){
-printf("Not digits\n");
 exit(1);
 }
 }
-/* x = atoi(argv[1]); */
 if (neg == 1){
-printf("Error : nbr is less than 0\n");
+printf("Error\n");
 exit(2);
 }
-printf("Good number\n");
 return (0);
 }
