@@ -55,5 +55,5 @@ break;
 ptr++;
 }
 va_end(args);
-printf("\n");
+/* printf("\n"); */
 }
