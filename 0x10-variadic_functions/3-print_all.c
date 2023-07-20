@@ -39,7 +39,7 @@ break;
 case 'f':
 print(count);
 count++;
-printf("%.2f", (float)va_arg(args, double));
+printf("%f", (float)va_arg(args, double));
 break;
 case 's':
 print(count);
