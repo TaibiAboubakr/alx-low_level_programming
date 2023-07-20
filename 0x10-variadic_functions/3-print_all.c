@@ -22,7 +22,6 @@ char *s;
 const char *ptr = format;
 va_list args;
 va_start(args, format);
-
 while (*ptr)
 {
 switch (*ptr)
@@ -40,13 +39,12 @@ break;
 case 'f':
 print(count);
 count++;
-printf("%f", va_arg(args, double));
+printf("%f", (float)va_arg(args, double));
 break;
 case 's':
 print(count);
 count++;
 s =  va_arg(args, char *);
-
 if (s == NULL)
 s = "(nil)";
 printf("%s", s);
@@ -55,7 +53,6 @@ default:
 break;
 }
 ptr++;
-
 }
 va_end(args);
 printf("\n");
