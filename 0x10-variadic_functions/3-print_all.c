@@ -22,7 +22,7 @@ char *s;
 const char *ptr = format;
 va_list args;
 va_start(args, format);
-while (*ptr && ptr)
+while (ptr)
 {
 switch (*ptr)
 {
@@ -52,8 +52,10 @@ break;
 default:
 break;
 }
+
 ptr++;
 }
+
 printf("\n");
 va_end(args);
 
