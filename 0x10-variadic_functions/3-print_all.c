@@ -22,7 +22,7 @@ char *s;
 const char *ptr = format;
 va_list args;
 va_start(args, format);
-while (*ptr)
+while (*ptr && ptr)
 {
 switch (*ptr)
 {
@@ -39,7 +39,7 @@ break;
 case 'f':
 print(count);
 count++;
-printf("%f", (float)va_arg(args, double));
+printf("%f", va_arg(args, double));
 break;
 case 's':
 print(count);
@@ -54,6 +54,7 @@ break;
 }
 ptr++;
 }
-va_end(args);
 printf("\n");
+va_end(args);
+
 }
