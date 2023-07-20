@@ -17,12 +17,14 @@ printf(", ");
  */
 void print_all(const char * const format, ...)
 {
+
 int count = 0;
 char *s;
 const char *ptr = format;
 va_list args;
 va_start(args, format);
-while (ptr)
+
+while (ptr && *ptr)
 {
 switch (*ptr)
 {
@@ -52,10 +54,8 @@ break;
 default:
 break;
 }
-
 ptr++;
 }
-
 printf("\n");
 va_end(args);
 
