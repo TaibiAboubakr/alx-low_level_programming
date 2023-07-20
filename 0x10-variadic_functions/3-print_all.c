@@ -1,6 +1,15 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
-
+void print (int count);
+/**
+ * print - function that prints .
+ * @count: counter
+ */
+void print(int count)
+{
+if (count > 0)
+printf(", ");
+}
 /**
  * print_all - function that prints anythng, followed by a new line.
  * @format: is a list of types of arguments passed to the function
@@ -8,30 +17,36 @@
  */
 void print_all(const char * const format, ...)
 {
-int count = 0, check = 0;
+int count = 0;
 char *s;
-const char *ptr;
+const char *ptr = format;
 va_list args;
-ptr = format;
 va_start(args, format);
+
 while (*ptr)
 {
-if (*ptr && count > 0 && check != 0)
-printf(", ");
-check = 1;
 switch (*ptr)
 {
 case 'i':
+print(count);
+count++;
 printf("%d", va_arg(args, int));
 break;
 case 'c':
+print(count);
+count++;
 printf("%c", va_arg(args, int));
 break;
 case 'f':
-printf("%f\n", va_arg(args, double));
+print(count);
+count++;
+printf("%f", va_arg(args, double));
 break;
 case 's':
+print(count);
+count++;
 s =  va_arg(args, char *);
+
 if (s == NULL)
 s = "(nil)";
 printf("%s", s);
