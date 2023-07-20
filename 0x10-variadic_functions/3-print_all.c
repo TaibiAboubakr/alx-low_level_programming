@@ -46,7 +46,7 @@ print(count);
 count++;
 s =  va_arg(args, char *);
 if (s == NULL || s[0] == '\0')
-s = "(nil)";
+s = "(niil)";
 printf("%s", s);
 break;
 default:
