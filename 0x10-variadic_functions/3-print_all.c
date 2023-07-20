@@ -29,7 +29,7 @@ switch (*ptr)
 case 'i':
 print(count);
 count++;
-printf("%d", va_arg(args, int));
+printf("%i", va_arg(args, int));
 break;
 case 'c':
 print(count);
