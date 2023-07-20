@@ -45,7 +45,7 @@ case 's':
 print(count);
 count++;
 s =  va_arg(args, char *);
-if (s == NULL)
+if (s == NULL || s[0] == '\0')
 s = "(nil)";
 printf("%s", s);
 break;
