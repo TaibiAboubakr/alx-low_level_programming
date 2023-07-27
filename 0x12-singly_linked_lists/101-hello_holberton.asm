@@ -7,18 +7,18 @@ section .text
 
 main:
 
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, msg
-    mov edx, 16
-    int 0x80
+    mov rax, 1
+    mov rdi, 1
+    mov rsi, msg
+    mov rdx, 16
+    syscall
 
-    mov eax, 4
-    mov ebx, 1
-    mov ecx, newline
-    mov edx, 1
-    int 0x80
+    mov rax, 1
+    mov rdi, 1
+    mov rsi, newline
+    mov rdx, 1
+    syscall
 
-    mov eax, 1
-    xor ebx, ebx
-    int 0x80
+    mov rax, 60
+    xor rdi, rdi
+    syscall
