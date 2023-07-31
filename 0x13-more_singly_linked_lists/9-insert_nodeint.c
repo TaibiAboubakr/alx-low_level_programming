@@ -17,6 +17,7 @@ unsigned int i = 0;
 
 if (head == NULL)
 return (NULL);
+
 p = malloc(sizeof(listint_t));
 if (p == NULL)
 return (NULL);
@@ -24,29 +25,28 @@ p->n = n;
 if ((*head) == NULL)
 {
 p->next = NULL;
-*head = p;
+(*head) = p;
 return (p);
 }
 if (idx == 0)
 {
-p->next = *head;
-*head = p;
+p->next = (*head);
+(*head) = p;
 return (p);
 }
-temp = *head;
+temp = (*head);
 while (temp)
 {
 if (i == idx - 1)
 {
 p->next = temp->next;
 temp->next = p;
-free(temp);
+
 return (p);
 }
 i++;
 temp = temp->next;
 }
-free(p);
-free(temp);
+
 return (NULL);
 }
