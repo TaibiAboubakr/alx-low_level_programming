@@ -30,12 +30,14 @@ r = read(o, buffer, letters);
 if (r == -1)
 {
 free(buffer);
+close(o);
 return (0);
 }
 
 w = write(STDOUT_FILENO, buffer, r);
 if (w == -1)
 {
+close(o);
 free(buffer);
 return (0);
 }
