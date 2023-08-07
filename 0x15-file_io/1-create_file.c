@@ -27,7 +27,10 @@ i++;
 
 w = write(o, text_content, i);
 if (w == -1)
+{
+close(o);
 return (0);
+}
 
 close(o);
 
