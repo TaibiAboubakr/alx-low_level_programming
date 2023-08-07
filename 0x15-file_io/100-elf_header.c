@@ -86,7 +86,7 @@ void print_data(unsigned char *e_idn)
 			printf("2's complement, little endian\n");
 			break;
 		case ELFDATA2MSB:
-			printf("2's complement, big-endian\n");
+			printf("2's complement, big endian\n");
 			break;
 		case ELFDATANONE:
 			printf("none\n");
