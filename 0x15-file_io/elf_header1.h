@@ -18,7 +18,7 @@ void print_version(unsigned char *e_idn)
 			printf("1 (current)\n");
 			break;
 		default:
-			printf("unknown\n");
+			printf("<unknown: %x>\n", e_idn[EI_VERSION]);
 			break;
 	}
 }
