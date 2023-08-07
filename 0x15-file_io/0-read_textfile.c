@@ -21,15 +21,25 @@ return (0);
 
 o = open(filename, O_RDONLY);
 if (o == -1)
+{
+free(buffer);
 return (0);
+}
 
 r = read(o, buffer, letters);
 if (r == -1)
+{
+free(buffer);
 return (0);
+}
 
 w = write(STDOUT_FILENO, buffer, r);
 if (w == -1)
+{
+free(buffer);
 return (0);
+}
+
 
 close(o);
 free(buffer);
