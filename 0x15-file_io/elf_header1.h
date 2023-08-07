@@ -73,20 +73,9 @@ void print_os_abi(unsigned char *e_idn)
 void print_abi_version(unsigned char *e_idn)
 {
 	printf("  ");
-	printf("ABI Version:                       ");
-	switch (e_idn[EI_ABIVERSION])
-	{
-		case 0:
-			printf("0\n");
-			break;
-		case 1:
-			printf("1\n");
-			break;
-		default:
-			printf("<unknown: %x>\n", e_idn[EI_ABIVERSION]);
-			break;
 
-	}
+		printf("ABI Version:                       %d\n",
+	       e_idn[EI_ABIVERSION]);
 }
 
 
