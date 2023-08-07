@@ -22,6 +22,8 @@ return (-1);
 o = open(filename, O_WRONLY | O_CREAT | O_TRUNC, perm);
 if (o == -1)
 return (-1);
+if (text_content == NULL)
+text_content = "\0";
 while (text_content[i])
 i++;
 
