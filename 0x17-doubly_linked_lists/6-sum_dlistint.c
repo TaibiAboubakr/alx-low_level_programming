@@ -1,5 +1,5 @@
 #include "lists.h"
-#include <string.h>
+
 
 /**
  * sum_dlistint - function that returns the sum of all the data (n)
