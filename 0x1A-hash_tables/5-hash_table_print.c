@@ -19,7 +19,7 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			if (!f_node)
 				printf(", ");
-			printf("'%s': '%s'", ht->array[idx]->key, ht->array[idx]->value);
+			printf("'%s': '%s'", temp->key, temp->value);
 			f_node = false;
 			temp = temp->next;
 		}
