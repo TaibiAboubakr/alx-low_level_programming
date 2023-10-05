@@ -18,8 +18,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		for (temp = ht->array[index]; temp; temp = temp->next)
 			if (strcmp(ht->array[index]->key, key) == 0)
-			{	free(ht->array[index]->value);
-				ht->array[index]->value = strdup(value);
+			{	free(temp->value);
+				temp->value = strdup(value);
+				if (temp->value == NULL)
+					return (0);
 				return (1);
 			}
 	}
