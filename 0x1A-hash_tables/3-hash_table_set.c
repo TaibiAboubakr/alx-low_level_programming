@@ -32,20 +32,19 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!new_node->value)
 	{	free(new_node);
 		return (0); }
-	new_node->key = (char *) key;
+	new_node->key = strdup(key);
+	if (!new_node->key)
+	{	free(new_node->value);
+		free(new_node);
+		return (0); }
 	new_node->next = NULL;
 	if (!ht->array[index])
-	{
-		ht->array[index] = new_node;
-		return (1);
-	}
-
+	{	ht->array[index] = new_node;
+		return (1);	}
 	else if (ht->array[index])
-	{
-		temp = ht->array[index];
+	{	temp = ht->array[index];
 		ht->array[index] = new_node;
 		ht->array[index]->next = temp;
-		return (1);
-	}
+		return (1);	}
 	return (0);
 }
