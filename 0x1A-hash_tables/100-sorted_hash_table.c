@@ -1,4 +1,5 @@
 #include "hash_tables.h"
+#include "hash_tables2.h"
 
 /**
  * shash_table_create - function that creates a sorted hash table
@@ -28,7 +29,6 @@ sh_table->size = size;
 
 return (sh_table);
 }
-
 
 
 /**
