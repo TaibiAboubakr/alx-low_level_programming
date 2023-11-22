@@ -1,6 +1,3 @@
-# Makefile for the 'school' executable
-
 # Rule: all
 all:
-	gcc -o school main.c
-
+	gcc main.c school.c -o school
