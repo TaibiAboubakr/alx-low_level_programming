@@ -19,6 +19,5 @@ fclean: clean oclean
 
 re: fclean all
 
-file1.o: file1.c m.h
-file2.o: file2.c m.h
-file3.o: file3.c m.h
+main.o: main.c m.h
+school.o: school.c m.h
