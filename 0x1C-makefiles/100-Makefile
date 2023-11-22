@@ -1,13 +1,12 @@
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic
-SRC = file1.c file2.c file3.c
+SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
-RM = rm -f
-all: $(NAME)
+RM = rm
 
-$(NAME): $(OBJ)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+all: $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
 	@$(RM) *~ $(NAME)
