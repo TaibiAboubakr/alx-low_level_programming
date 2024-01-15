@@ -23,7 +23,7 @@ int binary_search(int *array, size_t size, int value)
 
 }
 /**
- * searching -  function that searches for a value in an array of integers
+ * searching -  function that searches for a value in a sorted array of integers
  *				using the binary search algorithm
  * @array:  is a pointer to the first element of the array to search in
  * @low: first element in array
