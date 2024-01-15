@@ -40,22 +40,22 @@ int searching(int *array, int val, int low, int high)
 	if (low > high)
 		return (-1);
 
-		printf("Searching in array: ");
-		for (i = low; i <= high; i++)
-		{
-			printf("%d", array[i]);
-			if (i < high)
-				printf(", ");
-			else
-				printf("\n");
-		}
-		mid = (low + high) / 2;
-		if (array[mid] == val)
-			return (mid);
-		else if (val > array[mid])
-			return (searching(array, val, mid + 1, high));
+	printf("Searching in array: ");
+	for (i = low; i <= high; i++)
+	{
+		printf("%d", array[i]);
+		if (i < high)
+			printf(", ");
 		else
-			return (searching(array, val, low, mid - 1));
+			printf("\n");
+	}
+	mid = (low + high) / 2;
+	if (array[mid] == val)
+		return (mid);
+	else if (val > array[mid])
+		return (searching(array, val, mid + 1, high));
+	else
+		return (searching(array, val, low, mid - 1));
 
 	return (-1);
 }
