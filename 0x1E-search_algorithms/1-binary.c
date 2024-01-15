@@ -23,7 +23,8 @@ int binary_search(int *array, size_t size, int value)
 
 }
 /**
- * searching -  function that searches for a value in a sorted array of integers
+ * searching -  function that searches for a value in a sorted
+ * array of integers
  *				using the binary search algorithm
  * @array:  is a pointer to the first element of the array to search in
  * @low: first element in array
@@ -38,8 +39,7 @@ int searching(int *array, int val, int low, int high)
 
 	if (low > high)
 		return (-1);
-	else
-	{
+
 		printf("Searching in array: ");
 		for (i = low; i <= high; i++)
 		{
@@ -56,6 +56,6 @@ int searching(int *array, int val, int low, int high)
 			return (searching(array, val, mid + 1, high));
 		else
 			return (searching(array, val, low, mid - 1));
-	}
+
 	return (-1);
 }
