@@ -18,10 +18,12 @@ int binary_search_1(int *array, int start, int end, int value)
 	{
 		int mid = start + (end - start) / 2;
 
-		printf("Searching in the range [%d, %d]: ", start, end);
+		printf("Searching in array: ");
 		for (i = start; i <= end; ++i)
-			printf("%d ", array[i]);
-
+			{ printf("%d", array[i]);
+			if (i < end)
+				print(", ");
+		}
 		printf("\n");
 
 		if (array[mid] == value)
@@ -59,8 +61,8 @@ int exponential_search(int *array, size_t size, int value)
 	range = 1;
 	while (range < size && array[range] < value)
 	{
-		printf("Checking in the range [%ld, %ld]: %d\n",
-		range / 2, range, array[range]);
+		printf("Value checked array [%ld] = %d\n",
+		range, array[range]);
 		range *= 2;
 	}
 
