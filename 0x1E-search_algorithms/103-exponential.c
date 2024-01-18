@@ -22,7 +22,7 @@ int binary_search_1(int *array, int start, int end, int value)
 		for (i = start; i <= end; ++i)
 			{ printf("%d", array[i]);
 			if (i < end)
-				print(", ");
+				printf(", ");
 		}
 		printf("\n");
 
